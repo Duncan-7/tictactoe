@@ -1,0 +1,16 @@
+<div class="wrapper">
+  
+    <div class="board">
+      <div class="square" *ngFor="let square of squares; let i = index" (click)="onPlayerAction(i)" >
+        {{squares[i]}}
+      </div>
+    </div>
+  
+    <div class="row">
+        <h4>{{gameoverMessage}}</h4>
+    </div>
+    <div class="row">
+        <button class="btn btn-primary" *ngIf="gameover" (click)="resetGame()">Replay</button>
+    </div>
+
+</div>
