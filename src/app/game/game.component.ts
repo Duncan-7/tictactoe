@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-game',
@@ -12,7 +13,7 @@ export class GameComponent implements OnInit {
   currentPlayer: string;
   remainingSquares: number;
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
     this.resetGame();
@@ -67,9 +68,15 @@ export class GameComponent implements OnInit {
     ) {
       this.gameoverMessage = this.currentPlayer + ' wins!';
       this.gameover = true;
+      if (this.currentPlayer === 'Player') {
+        this.dataService.saveRecord('user');
+      } else {
+        this.dataService.saveRecord('opponent')
+      }
     } else if (this.remainingSquares === 0) {
       this.gameoverMessage = 'It\'s a Draw!';
       this.gameover = true;
+      this.dataService.saveRecord('draw')
     }
   }
 }

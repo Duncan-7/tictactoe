@@ -1,0 +1,12 @@
+<h2>Home</h2>
+
+<p>Welcome to the home of ShallowMind, the world's most powerful Tic Tac Toe playing super computer</p>
+
+<h3>Stats</h3>
+<p>Games Played: {{ this.gamesPlayed }}</p>
+<p>Games Won: {{ this.gamesWon }}</p>
+<p>Games Lost: {{ this.gamesLost }}</p>
+
+
+<button class="btn btn-primary" routerLink="/game">Play Tic Tac Toe</button> |
+<button class="btn btn-primary" (click)="onLogout()">Logout</button>

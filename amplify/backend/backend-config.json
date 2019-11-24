@@ -1,0 +1,9 @@
+{
+	"auth": {
+		"tictactoedfc80082": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-tictactoe-dev-61300-authRole",
+            "UnauthRoleArn": "arn:aws:iam::242416851623:role/amplify-tictactoe-dev-61300-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::242416851623:role/amplify-tictactoe-dev-61300-authRole",
+            "Region": "eu-west-2",
+            "DeploymentBucketName": "amplify-tictactoe-dev-61300-deployment",
+            "UnauthRoleName": "amplify-tictactoe-dev-61300-unauthRole",
+            "StackName": "amplify-tictactoe-dev-61300",
+            "StackId": "arn:aws:cloudformation:eu-west-2:242416851623:stack/amplify-tictactoe-dev-61300/773a9740-0e81-11ea-89c1-029d9e7b7264"
+        },
+        "categories": {
+            "auth": {
+                "tictactoedfc80082": {}
+            }
+        }
+    }
+}
