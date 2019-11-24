@@ -33,9 +33,6 @@
       </div>
       <button class="btn btn-primary" type="submit">Sign Up</button>
     </form>
-    <span 
-    class="help-block alert alert-danger" 
-    *ngIf="signupForm.submitted && !this.authService.idToken">Something went wrong during signup, please try again!</span>
     <hr>
     <p>Already have an account?</p>
     <button class="btn btn-primary" routerLink="/login">Login</button> 

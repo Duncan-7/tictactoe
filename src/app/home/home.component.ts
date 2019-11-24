@@ -8,7 +8,7 @@ import { DataService } from '../data.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  record = {
+  record: any = {
     "games": [
       {
         "created": "2019-11-15T16:23:40.000Z",
@@ -36,15 +36,16 @@ export class HomeComponent implements OnInit {
       }
     ]
   };
-  gamesPlayed = this.record.games.length
-  gamesWon = this.getResults('user')
-  gamesLost = this.getResults('opponent')
+
+  gamesPlayed = this.record.games.length;
+  gamesWon = this.getResults('user');
+  gamesLost = this.getResults('opponent');
 
   getResults(winner: string) {
     const results = this.record.games.filter(game => {
-      return game.winner === winner
+      return game.winner === winner;
     })
-    return results.length
+    return results.length;
   }
 
   constructor(private authService: AuthService, private dataService: DataService) { }
@@ -52,9 +53,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.dataService.getRecord().subscribe(response => {
       console.log(response);
-      this.record = response
+      this.record = response;
     }, error => {
-      console.log(error)
+      console.log(error);
     })
   }
 

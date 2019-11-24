@@ -1,7 +1,8 @@
 <div class="wrapper">
+  <h3>Tic Tac Toe</h3>
   
   <div class="board">
-    <div class="square" *ngFor="let square of squares; let i = index" (click)="onPlayerAction(i)" >
+    <div class="square" *ngFor="let square of squares; let i = index" (click)="onPlayerAction(i)" style="cursor: pointer;">
       {{squares[i]}}
     </div>
   </div>
